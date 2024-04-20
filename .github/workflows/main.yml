@@ -51,8 +51,11 @@ jobs:
           sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
       - name: Generate configuration file
-        run: make defconfig
-
+        run: |
+          make defconfig
+          cat .config
+          #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' .config
+        
       - name: Download packages
         run: make download -j16
 
