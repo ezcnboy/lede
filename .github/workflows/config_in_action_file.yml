@@ -63,15 +63,12 @@ jobs:
           remove-haskell: 'true'
           remove-codeql: 'true'
           remove-docker-images: 'true'
-
       - name: Free up disk space complete
         run: |
           echo "Free up disk space complete"
           echo "=============================================================================="
           df -hT
-          echo "=============================================================================="      
-
-      
+          echo "=============================================================================="   
       - name: Space cleanup and Initialization environment
         env:
           DEBIAN_FRONTEND: noninteractive
