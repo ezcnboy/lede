@@ -52,7 +52,6 @@ jobs:
 
       - name: Generate configuration file
         run: |
-          make defconfig
           cat .config
           #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' .config
         
